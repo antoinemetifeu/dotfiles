@@ -26,6 +26,9 @@ Plug 'vim-scripts/a.vim'
 
 Plug 'nathanaelkane/vim-indent-guides'
 
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " ----- Working with Git ----------------------------------------------
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -65,7 +68,9 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'digitaltoad/vim-jade'
 Plug 'tpope/vim-liquid'
 Plug 'cakebaker/scss-syntax.vim'
-" Todo: Find other syntax plugins...
+
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'posva/vim-vue'
 
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
@@ -97,65 +102,34 @@ Plug 'KabbAmine/vCoolor.vim'
 Plug 'mattn/emmet-vim'
 " Check file syntax on saving
 Plug 'tomtom/checksyntax_vim/'
+" vim wrapper for running tests
+Plug 'janko-m/vim-test'
+" Use sign column to indicate added, modified or removed lines in a file
+" that is managed by vcs
+Plug 'mhinz/vim-signify'
+" fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" vim alignment
+Plug 'junegunn/vim-easy-align'
 
-"Colorschemes
+
+" colorschemes
 " gruvbox
 Plug 'morhetz/gruvbox'
+" Solarized colorscheme for vim
+" Plug 'altercation/vim-colors-solarized'
 
-
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-"Plug 'junegunn/vim-easy-align'
-
-" Any valid git URL is allowed
-"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-"Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-"Plug '~/my-prototype-plugin'
-
-" Plug 'ervandew/supertab'
-
-" Plug 'tpope/vim-vinegar'
-
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Plug 'mhinz/vim-signify'
-
-" Plug 'janko-m/vim-test'
-
-" Plug 'othree/javascript-libraries-syntax.vim'
-
-" Plug 'posva/vim-vue'
 
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" surroundings brackets, parentheses, quotes, xml tags, ...
-" Plug 'tpope/vim-surround'
-" Solarized colorscheme for vim
-Plug 'altercation/vim-colors-solarized'
 
 " Initialize plugin system
 call plug#end()
+
 
 filetype plugin indent on
 
@@ -178,6 +152,7 @@ hi clear SignColumn
 
 " Use the solarized theme for the Airline status bar
 let g:airline_theme='solarized'
+
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
@@ -234,18 +209,17 @@ set colorcolumn=80
 set laststatus=2
 " let plugins show effects after 500ms, not 4s
 set updatetime=500
-
+" Indent size
 set ts=2
 set sw=2
 
-set background=dark
 
 " Custom indent guide colors
 " let g:indent_guides_auto_colors = 0
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=dark
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey
 
-
+" javascript libraries syntax
 let g:used_javascript_libs = 'underscore,react,flux,vue'
 
 " syntastic
@@ -258,31 +232,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+
 " vim-devicons
 set encoding=utf8
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 let g:airline_powerline_fonts = 1
 
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
 
-"call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-"call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-"call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-"call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-"call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-"call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-
+" colorschemes
 
 " solarized colorscheme
 " let g:solarized_termcolors=256
@@ -290,7 +247,7 @@ endfunction
 " set background=dark
 " colorscheme solarized
 
-" gruvbox
+" gruvbox colorscheme
 let g:gruvbox_italic=1 " Enforce displaying italics
 " set termguicolors " Support true color terminal
 " let g:gruvbox_termcolors=16 " terminal 16-color base colorscheme
