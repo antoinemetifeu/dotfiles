@@ -204,7 +204,7 @@ noremap K :SuperMan <cword><CR>
 
 
 " Highlight 80th column
-set colorcolumn=80
+" set colorcolumn=80
 " Always show status bar
 set laststatus=2
 " let plugins show effects after 500ms, not 4s
@@ -254,3 +254,9 @@ let g:gruvbox_italic=1 " Enforce displaying italics
 colorscheme gruvbox
 set background=dark
 
+" Ctrl + c/v to copy/paste
+" this will emulate GUI-like Ctrl + c/v when clipboard is setup
+nmap <C-c> "+y
+nmap <C-v> "+p
+vmap <C-c> "+y
+vmap <C-v> "+p

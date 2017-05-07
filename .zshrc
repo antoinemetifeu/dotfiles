@@ -85,7 +85,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+unsetopt beep                # no bell on error
+unsetopt hist_beep           # no bell on error in history
+unsetopt list_beep           # no bell on ambiguous completion
+unsetopt rm_star_silent      # ask for confirmaion for `rm *` or `rm path/*`
+
+
 export TERM="xterm-256color"
+[ -n "$TMUX" ] && export TERM=screen-256color
 
 export VISUAL="vim"
 
@@ -101,7 +108,14 @@ alias vim="nvim"
 alias vi="nvim"
 alias oldvim="/vim"
 
+alias tmux="env TERM=xterm-256color tmux"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.local/share/nvim/plugged/gruvbox/gruvbox_256palette.sh"
+
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# if [ "$TMUX" = "" ]; then
+# 	tmux attach -t main || tmux new -s main;
+# fi
