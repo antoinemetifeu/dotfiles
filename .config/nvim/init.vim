@@ -69,6 +69,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'tpope/vim-liquid'
 Plug 'cakebaker/scss-syntax.vim'
 
+Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'posva/vim-vue'
 
