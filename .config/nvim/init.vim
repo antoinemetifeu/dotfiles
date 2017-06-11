@@ -19,6 +19,14 @@ Plug 'vim-airline/vim-airline-themes'
 " Make tmux look like vim-airline
 Plug 'edkolev/tmuxline.vim'
 
+
+" Tree explorer
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+
 call plug#end()
 
 filetype plugin indent on
@@ -65,4 +73,10 @@ hi NonText ctermbg=NONE guibg=NONE
 
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
+
+
+" ----- NerdTree -----
+
+let g:nerdtree_tabs_open_on_console_startup=2
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 
