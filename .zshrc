@@ -61,7 +61,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=fr_FS.UTF-8
+export LANG=fr_FR.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -90,11 +90,17 @@ unsetopt hist_beep           # no bell on error in history
 unsetopt list_beep           # no bell on ambiguous completion
 unsetopt rm_star_silent      # ask for confirmaion for `rm *` or `rm path/*`
 
+export ANDROID_HOME=${HOME}/Android/Sdk 
+export PATH=${PATH}:${ANDROID_HOME}/tools 
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-export TERM="xterm-256color"
-[ -n "$TMUX" ] && export TERM=screen-256color
+export DEFAULT_USER="antoine"
 
 export VISUAL="vim"
+
+#export TERM=screen-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
+
 
 vman() {
   vim -c "SuperMan $*"
@@ -104,15 +110,28 @@ vman() {
   fi
 }
 
-alias vim="nvim"
+# Shorcuts toys
+eval $(thefuck --alias)
+# alias fuck="thefuck"
+alias sl="/usr/bin/sl"
+alias matrix="cmatrix"
+
+# shortcuts
+alias v="nvim"
 alias vi="nvim"
+alias vim="nvim"
 alias oldvim="/vim"
 
-alias tmux="env TERM=xterm-256color tmux"
+alias bc="bc -q"
+
+# alias tmux="env TERM=screen-256color tmux"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.local/share/nvim/plugged/gruvbox/gruvbox_256palette.sh"
+
+alias gitlog1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias gitlog2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 

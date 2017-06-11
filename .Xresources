@@ -10,12 +10,13 @@ Xft.antialias:                    true
 Xft.dpi:                          96
 Xft.rgba:                         rgb
 
+
 ! ##############
 ! URxvt settings
 ! ##############
 
 ! general
-URxvt*termName:                   screen-256color
+! URxvt*termName:                   screen-256color
 URxvt*geometry:                   120x36
 URxvt*loginShell:                 true
 URxvt*depth:                      32
@@ -42,7 +43,7 @@ URxvt*letterSpace:                0
 ! URxvt*scrollBar_floating:       false
 URxvt*scrollBar_right:            true
 URxvt*scrollstyle:                plain
-! URxvt*troughtColor:               #ffffff
+! URxvt*troughtColor:             #ffffff
 URxvt*scrollColor:                [60]#000000
 ! do not scroll with output
 URxvt*scrollTtyOuput:             false
@@ -56,7 +57,6 @@ URxvt*scrollTtyKeypress:          true
 ! URxvt perl extension
 ! ####################
 !
-! URxvt*perl-ext: abcdef
 URxvt*perl-ext-common:            default,matcher,keyboard-select,clipboard,selection-to-clipboard,font-size,fullscreen
 
 ! matcher (clickable urls and other clickable things is configurable)
@@ -66,14 +66,14 @@ URxvt*urlLauncher:               /usr/bin/xdg-open
 URxvt*matcher.button:             1
 
 ! keyboard-select
-URxvt.keysym.M-s:               perl:keyboard-select:activate
-URxvt.keysym.M-r:               perl:keyboard-select:search
+! URxvt.keysym.M-s:               perl:keyboard-select:activate
+! URxvt.keysym.M-r:               perl:keyboard-select:search
 
 ! clipboard
-URxvt.clipboard.autocopy:       true
-URxvt.keysym.M-c:               perl:clipboard:copy
-URxvt.keysym.M-v:               perl:clipboard:paste
-URxvt.keysym.M-C-v:             perl:clipboard:paste_escaped
+! URxvt.clipboard.autocopy:       true
+! URxvt.keysym.M-c:               perl:clipboard:copy
+! URxvt.keysym.M-v:               perl:clipboard:paste
+! URxvt.keysym.M-C-v:             perl:clipboard:paste_escaped
 
 ! `font-size` plugin
 URxvt.keysym.C-minus:           perl:font-size:decrease
@@ -93,8 +93,11 @@ URxvt.keysym.F11: perl:fullscreen:switch
 ! gruvbox colors palette
 ! ######################
 !
-URxvt*background:                 [90]#282828
+URxvt*background:                 [85]#282828
 URxvt*foreground:                 #ebdbb2
+URxvt.transparent:                true
+URxvt.shading:                    0
+URxvt.blurRadius:                 25x50
 URxvt*cursorColor:                #ebdbb2
 URxvt*color0:                     #282828
 URxvt*color8:                     #928374
@@ -153,62 +156,62 @@ URxvt*color250:                   #d5c4a1
 !URxvt.keysym.Page_Down       : \033[6~ !breaks scrolling in Rxvt
 !URxvt.keysym.Home            : \033[H  !breaks navigation in Vim
 !URxvt.keysym.End             : \033[F  !breaks navigation in Vim
-URxvt.keysym.S-Up             : \033[1;2A
-URxvt.keysym.S-Down           : \033[1;2B
-URxvt.keysym.S-Right          : \033[1;2C
-URxvt.keysym.S-Left           : \033[1;2D
+! URxvt.keysym.S-Up             : \033[1;2A
+! URxvt.keysym.S-Down           : \033[1;2B
+! URxvt.keysym.S-Right          : \033[1;2C
+! URxvt.keysym.S-Left           : \033[1;2D
 !URxvt.keysym.S-Page_Up       : captured by terminal for scrolling
 !URxvt.keysym.S-Page_Down     : captured by terminal for scrolling
-URxvt.keysym.S-Home           : \033[1;2H
-URxvt.keysym.S-End            : \033[1;2F
-URxvt.keysym.M-Up             : \033[1;3A
-URxvt.keysym.M-Down           : \033[1;3B
-URxvt.keysym.M-Right          : \033[1;3C
-URxvt.keysym.M-Left           : \033[1;3D
-URxvt.keysym.M-Page_Up        : \033[5;3~
-URxvt.keysym.M-Page_Down      : \033[6;3~
-URxvt.keysym.M-Home           : \033[1;3H
-URxvt.keysym.M-End            : \033[1;3F
-URxvt.keysym.M-S-Up           : \033[1;4A
-URxvt.keysym.M-S-Down         : \033[1;4B
-URxvt.keysym.M-S-Right        : \033[1;4C
-URxvt.keysym.M-S-Left         : \033[1;4D
+! URxvt.keysym.S-Home           : \033[1;2H
+! URxvt.keysym.S-End            : \033[1;2F
+! URxvt.keysym.M-Up             : \033[1;3A
+! URxvt.keysym.M-Down           : \033[1;3B
+! URxvt.keysym.M-Right          : \033[1;3C
+! URxvt.keysym.M-Left           : \033[1;3D
+! URxvt.keysym.M-Page_Up        : \033[5;3~
+! URxvt.keysym.M-Page_Down      : \033[6;3~
+! URxvt.keysym.M-Home           : \033[1;3H
+! URxvt.keysym.M-End            : \033[1;3F
+! URxvt.keysym.M-S-Up           : \033[1;4A
+! URxvt.keysym.M-S-Down         : \033[1;4B
+! URxvt.keysym.M-S-Right        : \033[1;4C
+! URxvt.keysym.M-S-Left         : \033[1;4D
 !URxvt.keysym.M-S-Page_Up     : seen as Rxvt.keysym.S-Page_Up
 !URxvt.keysym.M-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
-URxvt.keysym.M-S-Home         : \033[1;4H
-URxvt.keysym.M-S-End          : \033[1;4F
-URxvt.keysym.C-Up             : \033[1;5A
-URxvt.keysym.C-Down           : \033[1;5B
-URxvt.keysym.C-Right          : \033[1;5C
-URxvt.keysym.C-Left           : \033[1;5D
-URxvt.keysym.C-Page_Up        : \033[5;5~
-URxvt.keysym.C-Page_Down      : \033[6;5~
-URxvt.keysym.C-Home           : \033[1;5H
-URxvt.keysym.C-End            : \033[1;5F
-URxvt.keysym.C-S-Up           : \033[1;6A
-URxvt.keysym.C-S-Down         : \033[1;6B
-URxvt.keysym.C-S-Right        : \033[1;6C
-URxvt.keysym.C-S-Left         : \033[1;6D
+! URxvt.keysym.M-S-Home         : \033[1;4H
+! URxvt.keysym.M-S-End          : \033[1;4F
+! URxvt.keysym.C-Up             : \033[1;5A
+! URxvt.keysym.C-Down           : \033[1;5B
+! URxvt.keysym.C-Right          : \033[1;5C
+! URxvt.keysym.C-Left           : \033[1;5D
+! URxvt.keysym.C-Page_Up        : \033[5;5~
+! URxvt.keysym.C-Page_Down      : \033[6;5~
+! URxvt.keysym.C-Home           : \033[1;5H
+! URxvt.keysym.C-End            : \033[1;5F
+! URxvt.keysym.C-S-Up           : \033[1;6A
+! URxvt.keysym.C-S-Down         : \033[1;6B
+! URxvt.keysym.C-S-Right        : \033[1;6C
+! URxvt.keysym.C-S-Left         : \033[1;6D
 !URxvt.keysym.C-S-Page_Up     : seen as Rxvt.keysym.S-Page_Up
 !URxvt.keysym.C-S-Page_Down   : seen as Rxvt.keysym.S-Page_Down
-URxvt.keysym.C-S-Home         : \033[1;6H
-URxvt.keysym.C-S-End          : \033[1;6F
-URxvt.keysym.M-C-Up           : \033[1;7A
-URxvt.keysym.M-C-Down         : \033[1;7B
-URxvt.keysym.M-C-Right        : \033[1;7C
-URxvt.keysym.M-C-Left         : \033[1;7D
-URxvt.keysym.M-C-Page_Up      : \033[5;7~
-URxvt.keysym.M-C-Page_Down    : \033[6;7~
-URxvt.keysym.M-C-Home         : \033[1;7H
-URxvt.keysym.M-C-End          : \033[1;7F
-URxvt.keysym.M-C-S-Up         : \033[1;8A
-URxvt.keysym.M-C-S-Down       : \033[1;8B
-URxvt.keysym.M-C-S-Right      : \033[1;8C
-URxvt.keysym.M-C-S-Left       : \033[1;8D
+! URxvt.keysym.C-S-Home         : \033[1;6H
+! URxvt.keysym.C-S-End          : \033[1;6F
+! URxvt.keysym.M-C-Up           : \033[1;7A
+! URxvt.keysym.M-C-Down         : \033[1;7B
+! URxvt.keysym.M-C-Right        : \033[1;7C
+! URxvt.keysym.M-C-Left         : \033[1;7D
+! URxvt.keysym.M-C-Page_Up      : \033[5;7~
+! URxvt.keysym.M-C-Page_Down    : \033[6;7~
+! URxvt.keysym.M-C-Home         : \033[1;7H
+! URxvt.keysym.M-C-End          : \033[1;7F
+! URxvt.keysym.M-C-S-Up         : \033[1;8A
+! URxvt.keysym.M-C-S-Down       : \033[1;8B
+! URxvt.keysym.M-C-S-Right      : \033[1;8C
+! URxvt.keysym.M-C-S-Left       : \033[1;8D
 !URxvt.keysym.M-C-S-Page_Up   : seen as Rxvt.keysym.S-Page_Up
 !URxvt.keysym.M-C-S-Page_Down : seen as Rxvt.keysym.S-Page_Down
-URxvt.keysym.M-C-S-Home       : \033[1;8H
-URxvt.keysym.M-C-S-End        : \033[1;8F
+! URxvt.keysym.M-C-S-Home       : \033[1;8H
+! URxvt.keysym.M-C-S-End        : \033[1;8F
 
 
 ! Tabbdex

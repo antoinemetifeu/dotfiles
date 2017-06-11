@@ -49,4 +49,6 @@ exec xterm -geometry 80x66+0+0 -name login
 
 # exec dbus-launch --exit-with-session gnome-session
 
+# export TERM=screen-256color
+
 export LANG=fr_FR.UTF-8
