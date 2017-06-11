@@ -3,6 +3,8 @@ filetype off
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Colorscheme
+Plug 'morhetz/gruvbox'
 
 
 call plug#end()
@@ -32,4 +34,15 @@ set sw=2
 set expandtab
 set colorcolumn=81
 highlight ColorColumn ctermbg=238
+
+" ----- Colorscheme -----
+
+colorscheme gruvbox
+set background=dark
+set t_Co=256
+let g:gruvbox_italic=1
+
+" Fix for transparent bg
+hi Normal ctermbg=NONE guibg=NONE
+hi NonText ctermbg=NONE guibg=NONE
 
