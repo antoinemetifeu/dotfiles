@@ -27,6 +27,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 
+" Adds file type glyphs/icons to popular vim plugins
+Plug 'ryanoasis/vim-devicons'
+
+
 call plug#end()
 
 filetype plugin indent on
