@@ -35,6 +35,10 @@ Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
 
 
+" Indent guides
+Plug 'nathanaelkane/vim-indent-guides'
+
+
 " Adds file type glyphs/icons to popular vim plugins
 Plug 'ryanoasis/vim-devicons'
 
@@ -102,4 +106,11 @@ let g:easytags_suppress_ctags_warning=1
 
 " ----- Tagbar -----
 nmap <silent> <leader>b :TagbarToggle<CR>
+
+
+" ----- Indent guides -----
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors=0
+hi IndentGuidesEven ctermbg=236
+hi IndentGuidesOdd ctermbg=NONE
 
