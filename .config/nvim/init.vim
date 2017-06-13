@@ -54,6 +54,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 
+" Fuzzy file, buffer, mru, tag, etc finder
+Plug 'ctrlpvim/ctrlp.vim'
+
+" A command-line fuzzy finder written in Go
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+
 " Adds file type glyphs/icons to popular vim plugins
 Plug 'ryanoasis/vim-devicons'
 
