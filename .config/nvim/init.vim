@@ -39,6 +39,21 @@ Plug 'majutsushi/tagbar'
 Plug 'nathanaelkane/vim-indent-guides'
 
 
+" ----- Git -----
+
+" Show a git diff in the sign column
+Plug 'airblade/vim-gitgutter'
+
+" Show a diff in the sign column (same as vim-gitgutter but multi-vcs)
+" Plug 'mhinz/vim-signify'
+
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+
+" Git commit browser
+Plug 'junegunn/gv.vim'
+
+
 " Adds file type glyphs/icons to popular vim plugins
 Plug 'ryanoasis/vim-devicons'
 
@@ -98,6 +113,7 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 
 
 " ----- Easytags -----
+
 set tags=./tags;,~/.vimtags
 let g:easytags_dynamic_files=1
 let g:easytags_async=1
@@ -105,12 +121,19 @@ let g:easytags_resolve_links=1
 let g:easytags_suppress_ctags_warning=1
 
 " ----- Tagbar -----
+
 nmap <silent> <leader>b :TagbarToggle<CR>
 
 
 " ----- Indent guides -----
+
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 hi IndentGuidesEven ctermbg=236
 hi IndentGuidesOdd ctermbg=NONE
+
+
+" ----- GitGutter -----
+
+let g:airline#extensions#hunks#non_zero_only=1
 
