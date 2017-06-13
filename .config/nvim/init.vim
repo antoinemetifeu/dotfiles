@@ -50,6 +50,10 @@ Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 
 
+" Quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+
 " ----- Git -----
 
 " Show a git diff in the sign column
