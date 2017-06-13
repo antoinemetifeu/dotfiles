@@ -27,6 +27,14 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 
+" Automated tag generation and syntax highlighting
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+
+" Display tags in a window
+Plug 'majutsushi/tagbar'
+
+
 " Adds file type glyphs/icons to popular vim plugins
 Plug 'ryanoasis/vim-devicons'
 
@@ -83,4 +91,15 @@ let g:airline_powerline_fonts=1
 
 let g:nerdtree_tabs_open_on_console_startup=2
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+
+
+" ----- Easytags -----
+set tags=./tags;,~/.vimtags
+let g:easytags_dynamic_files=1
+let g:easytags_async=1
+let g:easytags_resolve_links=1
+let g:easytags_suppress_ctags_warning=1
+
+" ----- Tagbar -----
+nmap <silent> <leader>b :TagbarToggle<CR>
 
