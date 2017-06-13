@@ -39,6 +39,10 @@ Plug 'majutsushi/tagbar'
 Plug 'nathanaelkane/vim-indent-guides'
 
 
+" Better whitespace highlighting
+Plug 'ntpeters/vim-better-whitespace'
+
+
 " ----- Git -----
 
 " Show a git diff in the sign column
