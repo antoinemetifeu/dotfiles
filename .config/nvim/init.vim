@@ -54,6 +54,10 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
 
 
+" Use CTRL-A/CTRL-X to increment dates, times and more
+Plug 'tpope/vim-speeddating'
+
+
 " ----- Git -----
 
 " Show a git diff in the sign column
