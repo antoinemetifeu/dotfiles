@@ -43,6 +43,13 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ntpeters/vim-better-whitespace'
 
 
+" A vim alignement plugin
+Plug 'junegunn/vim-easy-align'
+
+" Text-filtering and alignment
+Plug 'godlygeek/tabular'
+
+
 " ----- Git -----
 
 " Show a git diff in the sign column
@@ -142,6 +149,13 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 hi IndentGuidesEven ctermbg=236
 hi IndentGuidesOdd ctermbg=NONE
+
+
+" Vim easy align
+" Start interactive EasyAlign in visual mode
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object
+nmap ga <Plug>(EasyAlign)
 
 
 " ----- GitGutter -----
