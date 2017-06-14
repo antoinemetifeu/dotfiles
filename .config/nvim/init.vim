@@ -58,6 +58,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-speeddating'
 
 
+" A vim plugin to colorize all text in the form #rgb,#rgba,rgb(),rgba(),etc
+Plug 'lilydjwg/colorizer'
+
+" Simple color selector/picker
+Plug 'KabbAmine/vCoolor.vim'
+
+
 " ----- Git -----
 
 " Show a git diff in the sign column
