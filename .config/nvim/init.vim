@@ -39,6 +39,10 @@ Plug 'majutsushi/tagbar'
 Plug 'editorconfig/editorconfig-vim'
 
 
+" Comment functions so powerful
+Plug 'scrooloose/nerdcommenter'
+
+
 " Indent guides
 Plug 'nathanaelkane/vim-indent-guides'
 
