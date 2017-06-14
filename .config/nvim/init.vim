@@ -35,6 +35,10 @@ Plug 'xolox/vim-easytags'
 Plug 'majutsushi/tagbar'
 
 
+" EditorConfig plugin
+Plug 'editorconfig/editorconfig-vim'
+
+
 " Indent guides
 Plug 'nathanaelkane/vim-indent-guides'
 
