@@ -90,8 +90,8 @@ unsetopt hist_beep           # no bell on error in history
 unsetopt list_beep           # no bell on ambiguous completion
 unsetopt rm_star_silent      # ask for confirmaion for `rm *` or `rm path/*`
 
-export ANDROID_HOME=${HOME}/Android/Sdk 
-export PATH=${PATH}:${ANDROID_HOME}/tools 
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 export DEFAULT_USER="antoine"
@@ -99,16 +99,7 @@ export DEFAULT_USER="antoine"
 export VISUAL="vim"
 
 #export TERM=screen-256color
-[ -n "$TMUX" ] && export TERM=screen-256color
-
-
-vman() {
-  vim -c "SuperMan $*"
-
-  if [ "$?" != "0" ]; then
-    echo "No manual entry for $*"
-  fi
-}
+[ -n "$tmux" ] && export TERM=screen-256color
 
 # Shorcuts toys
 eval $(thefuck --alias)
