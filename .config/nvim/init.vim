@@ -95,6 +95,43 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 
+" Perform all your vim insert mode completions with Tab
+Plug 'ervandew/supertab'
+
+
+" ----- Syntax, snippets & other languages plugins -----
+
+" A solid language pack
+Plug 'sheerun/vim-polyglot'
+
+" Syntax for JavaScript libraries
+Plug 'othree/javascript-libraries-syntax.vim'
+
+" Emmet for vim
+Plug 'mattn/emmet-vim'
+
+" Ruby on Rails power tools
+Plug 'tpope/vim-rails'
+
+" Tools and environnment to make vim superb for developing with Node.js
+Plug 'moll/vim-node'
+
+" Awesome python autocompletion
+Plug 'davidhalter/jedi-vim'
+
+" Pandoc integration and utilities
+Plug 'vim-pandoc/vim-pandoc'
+
+" Pandoc markdown syntax
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
+" The ultimate snippet solution
+Plug 'SirVer/ultisnips'
+
+" Snippets files for various languages
+Plug 'honza/vim-snippets'
+
+
 " Adds file type glyphs/icons to popular vim plugins
 Plug 'ryanoasis/vim-devicons'
 
@@ -174,7 +211,7 @@ hi IndentGuidesEven ctermbg=236
 hi IndentGuidesOdd ctermbg=NONE
 
 
-" Vim easy align
+" ----- Vim easy align -----
 " Start interactive EasyAlign in visual mode
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object
@@ -184,4 +221,9 @@ nmap ga <Plug>(EasyAlign)
 " ----- GitGutter -----
 
 let g:airline#extensions#hunks#non_zero_only=1
+
+
+" ----- Javascript libraries syntax -----
+
+let g:used_javascript_libs='jquery,underscore,backbone,prelude,angularjs,angularui,angularuirouter,react,flux,requirejs,sugar,jasmine,chai,handlebars,ramda,vue,d3'
 
