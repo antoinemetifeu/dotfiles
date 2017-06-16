@@ -36,3 +36,17 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 ```
 If you already have configuration files with identical names, checkout will fail. Back up and remove those files. Skip back up if you don’t need them
+
+
+
+## Keeping a list of explicitly installed packages
+
+```
+pacman -Qqe > ~/.pkglist
+```
+
+## To install packages from the list backup
+
+```
+pacman -S - < ~/.pkglist
+```

@@ -39,6 +39,10 @@ Plug 'majutsushi/tagbar'
 Plug 'editorconfig/editorconfig-vim'
 
 
+" A vim wrapper for running test
+Plug 'janko-m/vim-test'
+
+
 " Comment functions so powerful
 Plug 'scrooloose/nerdcommenter'
 
@@ -97,6 +101,13 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " Perform all your vim insert mode completions with Tab
 Plug 'ervandew/supertab'
+
+
+" Distraction-free writing
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+
+" Hyperfocus-writing
+Plug 'junegunn/limelight.vim'
 
 
 " ----- Syntax, snippets & other languages plugins -----
@@ -212,6 +223,7 @@ hi IndentGuidesOdd ctermbg=NONE
 
 
 " ----- Vim easy align -----
+
 " Start interactive EasyAlign in visual mode
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object
@@ -221,6 +233,14 @@ nmap ga <Plug>(EasyAlign)
 " ----- GitGutter -----
 
 let g:airline#extensions#hunks#non_zero_only=1
+
+
+" ----- Limelight -----
+
+let g:limelight_conceal_ctermfg=245
+let g:limelight_default_coefficient=0.3
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 
 " ----- Javascript libraries syntax -----
