@@ -1,256 +1,49 @@
-alacritty-git
-android-studio
-arch-silence-grub-theme
-ardour
-artwiz-fonts
-atom
-audacity
-autoconf
-automake
-baobab
-bash
-binutils
-bison
-bluez-utils
-bzip2
-capitaine-cursors
-cheese
-chrome-gnome-shell-git
-chromium
-cin-bin
-cmatrix
-composer
-coreutils
-cryptsetup
-ctags
-cups
-dconf-editor
-deepin-gtk-theme
-deluge
-devhelp
-device-mapper
-dhcpcd
-dia
-dialog
-diffutils
-dmenu
-e2fsprogs
-efibootmgr
-empathy
-eog
-epiphany
-evince
-evolus-pencil-bin
-evolution
-exfat-utils
-fakeroot
-file
-file-roller
-filesystem
-filezilla
-findutils
-firefox
-firefox-i18n-fr
-flex
-freecad
-gawk
-gcc
-gcc-libs
-gdm
-gedit
-gedit-code-assistance
-gettext
-gimp
-gitg
-glibc
-glxinfo
-gnome-backgrounds
-gnome-calculator
-gnome-calendar
-gnome-characters
-gnome-clocks
-gnome-code-assistance
-gnome-color-manager
-gnome-contacts
-gnome-control-center
-gnome-devel-docs
-gnome-dictionary
-gnome-disk-utility
-gnome-documents
-gnome-font-viewer
-gnome-getting-started-docs
-gnome-logs
-gnome-maps
-gnome-music
-gnome-nettool
-gnome-photos
-gnome-screenshot
-gnome-session
-gnome-settings-daemon
-gnome-shell
-gnome-shell-extensions
-gnome-shell-pomodoro
-gnome-sound-recorder
-gnome-system-monitor
-gnome-terminal
-gnome-themes-standard
-gnome-todo
-gnome-tweak-tool
-gnome-user-docs
-gnome-user-share
-gnome-weather
-google-chrome
-gparted
-grep
-grilo-plugins
-grub
-grub-customizer
-grub2-theme-vimix-git
-gtk3-print-backends
-gucharmap
-gvfs-afc
-gvfs-goa
-gvfs-google
-gvfs-gphoto2
-gvfs-mtp
-gvfs-nfs
-gvfs-smb
-gzip
-hamster-time-tracker
-hunspell-fr
-i3-gaps-git
-i3blocks
-i3lock
-i3status
-inetutils
-inkscape
-iproute2
-iputils
-iw
-jdk
-jfsutils
-keepassx2
-kodi
-krita
-less
-lib32-glib2
-lib32-gtk2
-lib32-libpulse
-lib32-libstdc++5
-lib32-libxrandr
-lib32-libxtst
-libcurl-openssl-1.0
-libgnome-games-support
-libreoffice-fresh
-libreoffice-fresh-fr
-libtool
-licenses
-lightdm-webkit2-greeter
-lightsoff
-linux
-lmms
-logrotate
-lvm2
-lwks
-m4
-make
-man-db
-man-pages
-mdadm
-molotov
-mousetweaks
-mutter
-mysql-workbench
-nano
-nautilus
-nautilus-sendto
-neofetch
-neovim
-nerd-fonts-complete-mono-glyphs
-net-tools
-netctl
-network-manager-applet
-networkmanager
-ngrok
-nodejs
-npm
-obs-studio
-okular
-openssh
-orca
-os-prober
-pacaur
-pacman
-paper-icon-theme-git
-patch
-pciutils
-pcmciautils
-perl
-phpstorm
-phpstorm-jre
-pkg-config
-plex-media-player
-poedit
-polari
-procps-ng
-psmisc
-python-neovim
-redshift
-reiserfsprogs
-rxvt-unicode-patched
-rygel
-s-nail
-samba
-scribus
-seahorse
-sed
-shadow
-sl
-spotify
-steam
-sudo
-sushi
-sysfsutils
-systemd-sysvcompat
-tar
-terminator
-texinfo
-thefuck
-tmux
-totem
-tracker
-unetbootin
-unrar
-urxvt-font-size-git
-urxvt-fullscreen
-urxvt-perls
-usbutils
-util-linux
-vagrant
-variety
-vi
-vim
-vim-airline-gruvbox-git
-vinagre
-vino
-virtualbox
-visual-studio-code
-wget
-which
-wine
-winff
-wireless_tools
-wpa_supplicant
-wxpython
-xdg-user-dirs-gtk
-xf86-video-intel
-xfsprogs
-xnviewmp
-xorg-server
-xorg-server-utils
-xorg-xinit
-xsel
-xterm
-yaourt
-yelp
-zsh
+alacritty-git 0.1.0.495.g1d949d7-1
+android-studio 2.3.3.0-1
+arch-silence-grub-theme r1.3c851d8-2
+capitaine-cursors r2-2
+chrome-gnome-shell-git 9.r2.ga691adb-1
+cin-bin 5.1-20174
+conan 0.23.2-1
+cower 17-2
+dee 1.2.7-9
+evolus-pencil-bin 3.0.3-1
+glxinfo 8.3.0-1
+gnome-shell-pomodoro 0.13.2-1
+google-chrome 59.0.3071.104-1
+grub-customizer 5.0.6-3
+grub2-theme-vimix-git 20170411-1
+i3-gaps-git 4.13-2
+jdk 8u131-1
+libcec3 3.1.0-1
+libcurl-openssl-1.0 7.54.0-2
+libopenssl-1.0-compat 1.0.2.l-1
+libunity 7.1.4-5
+lightdm-webkit2-greeter 2.2.5-1
+lwks 14.0.0-4
+molotov 1.5.1-1
+neofetch 3.1.0-1
+nerd-fonts-complete-mono-glyphs 1.0.0-1
+ngrok 2.1.18-1
+pacaur 4.7.9-1
+paper-icon-theme-git 729.579e9aab-1
+phpstorm 2017.1.4-1
+phpstorm-jre 2017.1.4-1
+plex-media-player 1.3.3-1
+python-daemonocle 0.8-3
+python-distro 1.0.4-1
+python-fasteners 0.14.1-4
+python-monotonic 1.3-1
+python-node-semver 0.1.1-2
+python-patch 1.16-3
+python-pluginbase 0.5-3
+python2-pluginbase 0.5-3
+pywebkitgtk 1.1.8-5
+rxvt-unicode-patched 9.22-9
+spotify 1.0.55.487-2
+urxvt-font-size-git 28-1
+urxvt-fullscreen 1-1
+vim-airline-gruvbox-git latest-2
+visual-studio-code 1.13.1-1
+xnviewmp 0.86-1
+xorg-server-utils 7.6-4
