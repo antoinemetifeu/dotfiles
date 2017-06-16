@@ -117,7 +117,16 @@ alias bc="bc -q"
 
 # alias tmux="env TERM=screen-256color tmux"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+vman() {
+  vim -c "Man $*"
+
+  if [ "$?" != "0"]; then
+    echo "No manual entry for $*"
+  fi
+}
+compdef vman="man"
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "$HOME/.local/share/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 
