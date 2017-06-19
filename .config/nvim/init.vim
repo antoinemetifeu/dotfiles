@@ -112,6 +112,15 @@ Plug 'junegunn/limelight.vim'
 
 " ----- Syntax, snippets & other languages plugins -----
 
+" Syntax checking hacks
+Plug 'vim-syntastic/syntastic'
+
+Plug 'mtscout6/syntastic-local-eslint.vim'
+
+" Check a file's syntax when saving a file
+" Plug 'tomtom/checksyntax_vim'
+
+
 " A solid language pack
 Plug 'sheerun/vim-polyglot'
 
@@ -188,6 +197,7 @@ let g:gruvbox_italic=1
 hi Normal ctermbg=NONE guibg=NONE
 hi NonText ctermbg=NONE guibg=NONE
 
+hi clear SignColumn
 
 " ----- Airline -----
 
@@ -241,6 +251,20 @@ let g:limelight_conceal_ctermfg=245
 let g:limelight_default_coefficient=0.3
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+
+" ----- Syntastic -----
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = [ 'eslint' ]
 
 
 " ----- Javascript libraries syntax -----
